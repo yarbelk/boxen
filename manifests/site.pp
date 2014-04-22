@@ -88,3 +88,42 @@ node default {
     target => $boxen::config::repodir
   }
 }
+
+node development {
+  include "foreman"
+  include "gcc"
+  include "go"
+  include "homebrew"
+  include "inifile"
+  include "nodejs"
+  include "openssl"
+  include "phantomjs"
+  include "pkgconfig"
+  include "repository"
+  include "ruby"
+  include "stdlib"
+  include "sudo"
+  include "xquartz"
+
+  include "iterm2"
+  include "firefox"
+  include "hipchat"
+  include "vagrant"
+  include "skype"
+  include "chrome"
+  include "dropbox"
+  include "postgresql"
+  include "osx"
+  include "virtualbox"
+  include "wget"
+  include "macvim"
+  include "heroku"
+  include "python"
+  include "zsh"
+  include "tmux"
+  include "gitx"
+  include "ctags"
+  include "textmate"
+  include "imagemagick"
+  include "qt"
+}
