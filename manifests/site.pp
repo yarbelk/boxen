@@ -95,7 +95,6 @@ node default {
   include "phantomjs"
   include "pkgconfig"
   include "stdlib"
-  include "sudo"
   include "xquartz"
 #
   include "iterm2::stable"
