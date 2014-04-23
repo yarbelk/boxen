@@ -32,3 +32,6 @@
     "source": "sstephenson/rbenv-gem-rehash"
 
 "ruby::rbenv_version": "v0.4.0"
+
+"postgresql::param::port": 5432
+"postgresql::param::user": "postgresql"
