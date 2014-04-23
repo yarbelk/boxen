@@ -87,9 +87,8 @@ node default {
     ensure => link,
     target => $boxen::config::repodir
   }
-}
 
-node development {
+  # Other things
   include "foreman"
   include "gcc"
   include "go"

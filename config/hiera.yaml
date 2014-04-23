@@ -22,3 +22,13 @@
 # besides the modules that use it, you might want to override deeply nested hash
 # values, too!
 :merge_behavior: deeper
+
+"ruby::default_gems":
+  - "bundler ~>1.6"
+
+"ruby::rbenv_plugins":
+  "rbenv-gem-rehash":
+    "ensure": "v1.0.0"
+    "source": "sstephenson/rbenv-gem-rehash"
+
+"ruby::rbenv_version": "v0.4.0"
