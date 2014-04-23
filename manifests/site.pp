@@ -58,11 +58,6 @@ node default {
   include hub
   include nginx
 
-  # fail if FDE is not enabled
-  if $::root_encrypted == 'no' {
-    fail('Please enable full disk encryption and try again')
-  }
-
   # node versions
   include nodejs::v0_6
   include nodejs::v0_8
@@ -83,28 +78,29 @@ node default {
     ]:
   }
 
-  file { "${boxen::config::srcdir}/our-boxen":
+  file { "${boxen::config::srcdir}/boxen":
     ensure => link,
     target => $boxen::config::repodir
   }
 
   # Other things
+  include "wget"
+  include "macvim"
   include "foreman"
   include "gcc"
-  include "go"
   include "homebrew"
-  include "inifile"
-  include "nodejs"
+  include "ruby"
+#  include "repository"
   include "openssl"
   include "phantomjs"
   include "pkgconfig"
-  include "repository"
-  include "ruby"
   include "stdlib"
   include "sudo"
   include "xquartz"
-
-  include "iterm2"
+#
+  include "iterm2::stable"
+  include iterm2::colors::solarized_dark
+  include "sysctl"
   include "firefox"
   include "hipchat"
   include "vagrant"
@@ -112,14 +108,11 @@ node default {
   include "chrome"
   include "dropbox"
   include "postgresql"
-  include "osx"
-  include "virtualbox"
-  include "wget"
-  include "macvim"
-  include "heroku"
-  include "python"
   include "zsh"
   include "tmux"
+  include "virtualbox"
+  include "heroku"
+  include "python"
   include "gitx"
   include "ctags"
   include "textmate"
