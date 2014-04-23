@@ -25,4 +25,4 @@ ENV['BOXEN_REPO_NAME'] = 'yarbelk/boxen'
 # ENV['BOXEN_REPO_URL_TEMPLATE'] = 'https://github.yourdomain.com/%s'
 
 # Required for homebrew to actually work. at all.
-ENV['HOMEBREW_BUILD_FROM_SOURCE'] = true
+ENV['HOMEBREW_BUILD_FROM_SOURCE'] = 'true'
