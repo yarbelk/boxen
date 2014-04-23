@@ -5,7 +5,7 @@
 # ENV['BOXEN_HOME'] = '/opt/boxen'
 
 # Change the repo boxen will use.
-# ENV['BOXEN_REPO_NAME'] = 'boxen/our-boxen'
+ENV['BOXEN_REPO_NAME'] = 'yarbelk/boxen'
 
 # Boxen binary packaging
 # ENV["BOXEN_S3_ACCESS_KEY"] = ''
@@ -23,3 +23,6 @@
 
 # required for Github Enterprise (defaults to "https://github.com/%s")
 # ENV['BOXEN_REPO_URL_TEMPLATE'] = 'https://github.yourdomain.com/%s'
+
+# Required for homebrew to actually work. at all.
+ENV['HOMEBREW_BUILD_FROM_SOURCE'] = true
