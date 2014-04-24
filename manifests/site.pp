@@ -63,11 +63,22 @@ node default {
   include nodejs::v0_8
   include nodejs::v0_10
 
+  class { 'ruby::global':
+    version => '2.1.1'
+  }
+
   # default ruby versions
   ruby::version { '1.9.3': }
   ruby::version { '2.0.0': }
   ruby::version { '2.1.0': }
   ruby::version { '2.1.1': }
+
+  # default ruby gems
+  ruby::gem { "git pairs gem":
+    gem => 'pivotal_git_scripts',
+    version => "2.1.1",
+    version => "1.2.0"
+  }
 
   # common, useful packages
   package {
