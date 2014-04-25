@@ -25,6 +25,7 @@
 
 "ruby::default_gems":
   - "bundler ~>1.6"
+  - "rake"
 
 "ruby::rbenv_plugins":
   "rbenv-gem-rehash":
