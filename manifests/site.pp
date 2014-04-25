@@ -58,6 +58,14 @@ node default {
   include hub
   include nginx
 
+  # OS X stuff
+  include osx::dock::autohide
+  include osx::dock::clear_dock
+  include osx::finder::show_all_on_desktop
+  include oxs::universal_access:ctrl_mod_zoom
+  include osx::software_update
+  include osx::keyboard::capslock_to_control
+
   # node versions
   include nodejs::v0_6
   include nodejs::v0_8
