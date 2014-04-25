@@ -35,3 +35,5 @@
 
 "postgresql::param::port": 5432
 "postgresql::param::user": "postgresql"
+
+"dotfiles::omz_path": "/Users/${::boxen_user}/.oh-my-zsh"
