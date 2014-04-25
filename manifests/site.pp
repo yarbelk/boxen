@@ -62,7 +62,7 @@ node default {
   include osx::dock::autohide
   include osx::dock::clear_dock
   include osx::finder::show_all_on_desktop
-  include oxs::universal_access::ctrl_mod_zoom
+  include osx::universal_access::ctrl_mod_zoom
   include osx::software_update
   include osx::keyboard::capslock_to_control
 
