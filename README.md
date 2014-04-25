@@ -1,4 +1,14 @@
-# Our Boxen
+# Boxen
+
+> - install Xcode
+> - Clone into `/opt/boxen/repo` with user `${user}:staff`.
+> - You can't have Homebrew, rbenv, rvm installed (boxen does this for you, and in its own way)
+> - Probably want to set `HOMEBREW_BUILD_FROM_SOURCE` to some value: `export HOMEBREW_BUILD_FROM_SOURCE=true` should work.  This should be set by boxen, but I haven't tested it...
+> - Go to said location and run `ARCHFLAGS=-Wno-error=unused-command-line-argument-hard-error-in-future ./script/boxen --user neo --debug`
+>   Where neo is your user, and debug explodes your STDERR with lots of messasges.
+>
+> omzsh, tmux confs and vim confs are not setup yet - grab them and install.
+> Hacking should result.
 
 This is a template Boxen project designed for your organization to fork and
 modify appropriately.
