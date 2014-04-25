@@ -56,7 +56,6 @@ node default {
   include dnsmasq
   include git
   include hub
-  include nginx
 
   # OS X stuff
   include osx::dock::autohide
@@ -92,7 +91,11 @@ node default {
     [
       'ack',
       'findutils',
-      'gnu-tar'
+      'gnu-tar',
+      'heroku',
+      'postgresql',
+      'imagemagick',
+      'qt'
     ]:
   }
 
