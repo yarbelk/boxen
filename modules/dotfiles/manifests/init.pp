@@ -34,8 +34,7 @@ class dotfiles {
     require => Repository["gabe_dotfiles_repo"]
   }
 
-  file { ".zshrc":
-    path => "${home}/.zshrc",
+  file { "${home}/.zshrc":
     ensure => file,
     require => Repository["robbyrussell_oh-my-zsh"],
     content => template("dotfiles/zshrc.erb")
@@ -43,8 +42,7 @@ class dotfiles {
 
   exec { "install vim config":
     cwd => $neo_dotfiles_dir,
-    command => "rake",
-    provider => shell,
+    command => "/usr/bin/rake",
     creates => [ "${home}/.vimrc", "${home}/.vim/" ],
     require => Repository["neo_dotfiles_repo"]
   }
