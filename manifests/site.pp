@@ -19,6 +19,7 @@ Exec {
   ],
 
   environment => [
+    "HOMEBREW_BUILD_FROM_SOURCE=true",
     "HOMEBREW_CACHE=${homebrew::config::cachedir}",
     "HOME=/Users/${::boxen_user}"
   ]
@@ -82,8 +83,20 @@ node default {
   # default ruby gems
   ruby::gem { "git pairs gem":
     gem => 'pivotal_git_scripts',
-    ruby => "2.1.1",
+    ruby => "*",
     version => "1.2.0"
+  }
+
+  ruby::gem { "rake for all":
+    gem => "rake",
+    version => "~> /10.1.1",
+    ruby => "*"
+  }
+
+  ruby::gem { "bundle for all":
+    gem => "bundler",
+    version => "1.5.3",
+    ruby => "*"
   }
 
   # common, useful packages
@@ -93,6 +106,7 @@ node default {
       'findutils',
       'gnu-tar',
       'heroku',
+      'readline',
       'postgresql',
       'imagemagick',
       'qt'
@@ -126,7 +140,6 @@ node default {
   include "skype"
   include "chrome"
   include "dropbox"
-  include "postgresql"
   include "zsh"
   include "tmux"
   include "virtualbox"
