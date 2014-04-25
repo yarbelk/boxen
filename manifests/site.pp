@@ -136,4 +136,6 @@ node default {
   include "qt"
   include "rubymine"
   include "jumpcut"
+
+  include "dotfiles"
 }
