@@ -128,4 +128,5 @@ node default {
   include "textmate"
   include "imagemagick"
   include "qt"
+  include "rubymine"
 }
